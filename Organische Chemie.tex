@@ -1,4 +1,4 @@
-\documentclass[a4paper]{article}
+\documentclass[a4paper]{report}
 
 \usepackage{times}
 \usepackage[ngerman]{babel}
@@ -12,6 +12,7 @@
 \usepackage{longtable}
 \usepackage{xcolor}
 \usepackage{amssymb}
+\usepackage{Tabularx}
 
 \pagestyle{fancy}
 \fancyhf{}
@@ -40,6 +41,7 @@
 %________________________________________________________________________________________________
 
 
+\chapter{Grundlegendes}
 \section{Stöchiometrie}
 Stöchiometrie, auch chemisches Rechnen, ist ein Werkzeug der Chemie, mit welchen man Stoffmengen verhältnisse
 nutzen kann, um zum Beispiel Produktmengen oder Volumen zu errechnen.
@@ -79,7 +81,6 @@ nutzen kann, um zum Beispiel Produktmengen oder Volumen zu errechnen.
 \end{center}
 
 
-
 \section{Grundlegendes Wissen}
 
 \subsection{Säuren und Basen nach Brønsted}
@@ -108,7 +109,6 @@ Wasser kann nicht nur als Base mit einer Säure reagieren, sondern auch als Säu
 Alkalische Lösungen sind von den \textbf{Hydroxid-Ionen}(\ce{OH^$\ominus$}) charakterisiert und enthalten auch Baserest-Ionen (hier: \ce{NH_4^$\oplus$}).
 Säuren und Basen reagieren zusammen zu Wasser und den jeweiligen Rest-Ionen.
 
-
 \subsection{Nucleophile und Elektrophile}
 \paragraph{Nucleophile} 
 Teilchen sind \textbf{negativ} geladenen Ionen oder Moleküle mit \textbf{Elektronenüberschuss}, zum Beispiel freie Elektronenpaare (Elektronendonatoren).
@@ -120,7 +120,6 @@ kann es polarisiert werden. Ob eine Abgangsgruppe gut oder schlechter ist, ist A
 
 \paragraph{Elektrophile} Teilchen sind Ionen oder Moleküle mit \textbf{Elektronenmangel} beziehungsweise \textbf{Elektronenlücken} (Elektronenakzeptoren).
 Sie greifen den Reaktionspartner an Stellen \textbf{hoher Elektronendichte}, also im Bereich negativer Ladung oder Partialladung an.
-
 
 \subsection{Typische Ionen}
 Manche Ionen kommen in der Organik häufig vor. Die Wichtigsten und wie sie heißen ist im folgenden zu finden:
@@ -146,19 +145,26 @@ Schauen wir uns die \textbf{Stabilitätsreihe der Alkylradikale} an:
 Der Grund für diese Anordnung ist der +I-Effekt der Alkylgruppen.
 
 \subsection{Nachweisreaktion}
-\begin{center}
-    \begin{tabular}{|c | c|} \hline
+\begin{table}[h!]
+    \centering
+    \renewcommand{\arraystretch}{1.3}
+    \begin{tabularx}{\textwidth}{|>{\centering\arraybackslash}X|
+                                 >{\centering\arraybackslash}X|} 
+        \hline
         \textbf{Nachweisreaktion} & \textbf{Stoff} \\ \hline
-        Knallgasprobe &Wasserstoff \\
-        Glühspanprobe &Sauerstoff \\
-        Kalkwasserprobe &Kohlenstoffdioxid \\
-        Entfärbung von Brom &Alken oder Alkin \\
+        Knallgasprobe & Wasserstoff \\ 
+        Glühspanprobe & Sauerstoff \\ 
+        Kalkwasserprobe & Kohlenstoffdioxid \\ 
+        Entfärbung von Brom & Alken oder Alkin \\ 
         Beilsteinprobe & Halogenalkan \\ \hline
-        Silbernitrat & Weißer Niederschlag: Chlorid \\
-        \quad & Weiß-Gelber Niederschlag: Bromid \\
-        \quad & Gelber Niederschlag: Iodid \\ \hline
-    \end{tabular}
-\end{center}
+        Silbernitrat & Weißer Niederschlag: Chlorid \\ 
+        & Weiß-gelber Niederschlag: Bromid \\ 
+        & Gelber Niederschlag: Iodid \\ \hline
+        Fehling-/ Bennedikt-/ Tollensreagenz & Aldehyde\\ \hline
+    \end{tabularx}
+    \caption{Nachweisreaktionen für verschiedene Stoffe}
+    \label{tab:nachweisreaktionen}
+\end{table}
 
 \subsection{Isomerie}
 Der Name Isomer ist von Iso (griech. für gleich) und meros (griech. für Teil) abgeleitet. 
@@ -177,8 +183,40 @@ Konstitutionsisomere besitzen die gleiche Summenformel, aber eine andere Struktu
 Stereoisomere haben grundsätzlich die gleiche Struktur (Konstitution) -- und damit auch die gleiche Summenformel -- unterscheiden sich aber durch die räumliche Anordnung (Konfiguration) der Atome. 
 Alle Stereoisomere, die keine Enantiomere sind, bezeichnet man als Diastereomere. Ein Spezialfall ist die cis-trans-Isomerie an Doppelbindungen. 
 
-\section{Stoffklassen}
-\subsection{Alkane}
+\subsection{Redoxreaktion}
+\subsubsection{Was ist eine Redoxreaktion}
+Eine \textbf{Oxidation} ist definiert als Elektronenabgabe. Der Stoff, der oxidiert wird, ist das \textbf{Reduktionsmittel}.\\\\
+Eine \textbf{Reduktion} ist definiert als Elektronenaufnahmen.Der Stoff, der reduziert wird, ist das \textbf{Oxidationsmittel}\\\\
+Daraus geht hervor, dass zu einer Oxidation immer eine Reduktion gehört. Eine Redoxreaktion ist also eine Elektronenübertragung.\\\\
+
+\subsubsection{Oxidationszahlen}
+Oxidationszahlen dienen dazu zu bestimmen, welcher Bestandteil einer Redoxreaktion oxidiert und welches reduziert wird.\\\\
+
+\paragraph{Oxidationszahlen werden wie folgt bestimmt:}
+\begin{enumerate}
+    \item Lewis Formel notieren
+    \item Elektronenpaarbindungen werden dem Atom der Bindung mit der höheren Elektronegativität zugeordnet
+    \item Oxidationszahl = Anzahl Valenzelektronen - Anzahl aller zugeordneten Elektronen\\\\
+\end{enumerate}
+
+\paragraph{Regeln zur Bestimmung der Oxidationszahlen:}
+\begin{enumerate}
+    \item Atome in elementaren Stoffen haben die Oxidationszahl \textbf{0}
+    \item Bei enfachen \textbf{Ionen} entspricht die Oxidationszahl der Ionenladung
+    \item \textbf{Fluor} hat in Verbindungen immer die Oxidationszahl \textbf{-\rom{1}}
+    \item H hat in Verbindungen immer die Oxidationszahl \textbf{\rom{1}}\\
+            Eine Außnahme stellen Hydride dar ($NaH$, $CaH_2$)
+    \item Sauerstoff hat in Verbindungen immer die Oxidationszahl \textbf{-\rom{2}}\\
+            Eine Außnahme bilden Peroxide und Sauerstofffluoride ($H_2O_2$, $OF_2$)
+    \item Die Summe der Oxidationszahlen eines Teilchens entspricht der Gesamtladung des Teilchens.
+\end{enumerate}
+
+
+%-------------------------------------------------------------------------------------------------------
+
+\chapter{Stoffklassen}
+
+\section{Alkane}
 
 Alkane Sind eine Reihe \textbf{Kohlenstoffatome}, mit anliegenden
 \textbf{Wasserstoffatomen}. Die Reihe, welche die Alkane bilden, wenn man sie nach der Anzahl C-Atom
@@ -216,7 +254,7 @@ Alkane besitzen folgene \textbf{Eigenschaften}:\\
 \end{itemize}
 
 
-\subsection{Halogenalkane}
+\section{Halogenalkane}
 
 Halogenalkane sind Alkane, denen durch \textbf{elektrophile Addition}, aus Alkenen, oder durch
 \textbf{radikalische Substitution}, aus Alkanen, ein Halogen addiert wurde. \\
@@ -232,8 +270,8 @@ Eine Nachweisreaktion für Halogenalkane ist die Beilsteinprobe.
 
 
 
-\subsection{Kohlenwasserstoffe mit Mehrfachbindungen}
-\subsubsection{Alkene und Alkine}
+\section{Kohlenwasserstoffe mit Mehrfachbindungen}
+\subsection{Alkene und Alkine}
 
 Alkene sind Kohlenwasserstoffe, welche eine Doppelbindung zwischen zwei C-Atomen besitzen.
 Sie wie die Alkane benannt, besitzen aber eine \textbf{-en} Endung. Vor dieser Endung wird die Stelle der Mehrfachbindung geschrieben,
@@ -251,7 +289,7 @@ Alkine bekommen hingegen die Ändung \textbf{-in}.\\
 \end{center}
 
 
-\subsubsection{$\pi$ und $\sigma$ Bindungen}
+\subsection{$\pi$ und $\sigma$ Bindungen}
 
 Elektronenpaare in Mehrfachbindungen haben verschiedene Bindungsstärken. $\pi$-Bindungen (Pi-Bindungen) sind schwächer als $\sigma$-Bindungen (Sigma-Bindungen).
 Sie befinden sich sozusagen seitlich von der Mitte der beiden Bindungspartner. Bei Dreifachbindungen gibt es zwei $\pi$-Bindungen.\\
@@ -259,7 +297,7 @@ Das heißt bei Reaktionen, bei denen eine Mehrfachbindung gespalten werden, wird
 
 
 
-\subsubsection{Mehrfachsubstutution}
+\subsection{Mehrfachsubstutution}
 
 Wichtig bei Mehrfachsubstutution und Mehrfachaddition ist die Benennung mit cis- und trans-.\\
 \begin{center}
@@ -270,7 +308,7 @@ Wichtig bei Mehrfachsubstutution und Mehrfachaddition ist die Benennung mit cis-
 Eine Nachweisreaktion für Mehrfachbindungen ist die Entfärbung von Bromwasser. Der typische Reaktionsmechanismus der Alkene ist die elektrophile Addition.
 
 
-\subsection{Alkohole}
+\section{Alkohole}
 
 Alkohole sind Moleküle mit einer O-H-Gruppe (Hydroxygruppe).\\
 Die Alkohole werden auf zwei Weisen unterschieden:
@@ -284,7 +322,7 @@ Die Alkohole werden auf zwei Weisen unterschieden:
 \end{enumerate}
 
 
-\subsection{Typische Reaktionsmechanismen}
+\section{Typische Reaktionsmechanismen}
 \begin{tabular}{|c|c|} \hline
     Stoffklasse &Typischer Mechanismus \\\hline
     Alkane &Substitution, Eliminierung\\
@@ -295,49 +333,19 @@ Die Alkohole werden auf zwei Weisen unterschieden:
 
 
 
-\section{Redoxreaktion}
-
-\subsection{Was ist eine Redoxreaktion}
-Eine \textbf{Oxidation} ist definiert als Elektronenabgabe. Der Stoff, der oxidiert wird, ist das \textbf{Reduktionsmittel}.\\\\
-Eine \textbf{Reduktion} ist definiert als Elektronenaufnahmen.Der Stoff, der reduziert wird, ist das \textbf{Oxidationsmittel}\\\\
-Daraus geht hervor, dass zu einer Oxidation immer eine Reduktion gehört. Eine Redoxreaktion ist also eine Elektronenübertragung.\\\\
+%__________________________________________________________________________________________________
 
 
-\subsection{Oxidationszahlen}
-Oxidationszahlen dienen dazu zu bestimmen, welcher Bestandteil einer Redoxreaktion oxidiert und welches reduziert wird.\\\\
+\chapter{Reaktionsmechanismen}
 
-\paragraph{Oxidationszahlen werden wie folgt bestimmt:}
-\begin{enumerate}
-    \item Lewis Formel notieren
-    \item Elektronenpaarbindungen werden dem Atom der Bindung mit der höheren Elektronegativität zugeordnet
-    \item Oxidationszahl = Anzahl Valenzelektronen - Anzahl aller zugeordneten Elektronen\\\\
-\end{enumerate}
-
-
-\paragraph{Regeln zur Bestimmung der Oxidationszahlen:}
-\begin{enumerate}
-    \item Atome in elementaren Stoffen haben die Oxidationszahl \textbf{0}
-    \item Bei enfachen \textbf{Ionen} entspricht die Oxidationszahl der Ionenladung
-    \item \textbf{Fluor} hat in Verbindungen immer die Oxidationszahl \textbf{-\rom{1}}
-    \item H hat in Verbindungen immer die Oxidationszahl \textbf{\rom{1}}\\
-            Eine Außnahme stellen Hydride dar ($NaH$, $CaH_2$)
-    \item Sauerstoff hat in Verbindungen immer die Oxidationszahl \textbf{-\rom{2}}\\
-            Eine Außnahme bilden Peroxide und Sauerstofffluoride ($H_2O_2$, $OF_2$)
-    \item Die Summe der Oxidationszahlen eines Teilchens entspricht der Gesamtladung des Teilchens.
-\end{enumerate}
-
-
-
-\section{Reaktionsarten}
-
-\subsection{Reaktionswege der Alkane}
+\section{Reaktionswege der Alkane}
 \begin{center}
     \includegraphics[width=12cm]{Bilder/ReaktionswegeAlkane.png}
 \end{center}
 
 
 
-\subsection{Radikalische Substitution ($S_R$)}
+\section{Radikalische Substitution ($S_R$)}
 
 Bei der Radikalischen Substitution wird ein H-Atom eines Kohlenwasserstoffs durch ein Halogen ersetzt.
 Sie läuft in drei Schritten ab:\\
@@ -385,7 +393,7 @@ Sie läuft in drei Schritten ab:\\
 
 
 
-\subsection{Nucleophile Substitution}
+\section{Nucleophile Substitution}
 
 Bei der Nucleophilen Substitution wird ein Halogen eines Halogenkohlenwasserstoffs durch ein Nucleophil ersetzt.\\
 Es gibt zwei verschiedene Arten nucleophiler Substitution. Die \textbf{monomolekulare $S_N1$} und die \textbf{bimolekulare $S_N2$}.\\
@@ -393,7 +401,7 @@ Bei der $S_N1$ wir zuerst das Halogen abgespalten und ein \ce{X^-}-Ion und ein K
 Danach reagiert erst das Nucleophil mit diesem Radikal.\\\\
 Bei der $S_N2$ passieren diese zwei Schritte gleichzeitig. Es sind also zeitweise sowohl Halogen, als auch Nucleophil an das selbe C-Atom des Kohlenwasserstoffs gebunden.\\
 
-\subsubsection{$S_N1$}
+\subsection{$S_N1$}
 
 \begin{enumerate}
     \item Schritt\\
@@ -414,7 +422,7 @@ Bei der $S_N2$ passieren diese zwei Schritte gleichzeitig. Es sind also zeitweis
 
 Bei der $S_N1$ bestimmt der erste Schritt die Geschwindigkeit.\\\\
 
-\subsubsection{$S_N2$}
+\subsection{$S_N2$}
 
 \begin{center}
     \schemestart
@@ -427,7 +435,7 @@ Bei der $S_N1$ bestimmt der erste Schritt die Geschwindigkeit.\\\\
     \schemestop
 \end{center}
 
-\subsubsection{Vergleich}
+\subsection{Vergleich}
 Nach welchen Mechanismus die $S_N$ abläuft, ist von der Struktur des Halogenalkans und dem EInfluss des
 Nucleophils abhängig. \\
 \begin{center}
@@ -438,7 +446,7 @@ Nucleophils abhängig. \\
 \end{tabular}
 \end{center}
 
-\subsection{Elektrophile Addition}
+\section{Elektrophile Addition}
 Bei einer elektrophile Addition lagern sich Elektrophile an die Doppelbindungen ungesättigter Moleküle.
 Diese ist bimolekular und Zweischrittig.
 
@@ -472,12 +480,12 @@ Diese ist bimolekular und Zweischrittig.
 \end{enumerate}
 
 
-\subsection{Eleminierungsreaktion}
+\section{Eleminierungsreaktion}
 Bei der Eleminierungsreaktion werden zwei Atome oder Atomgruppen von benachbarten C-Atomen abgespalten ohne, dass diese durch irgentwas ersetzt werden.
 Dadurch entsteht zwischen den beiden C-Atomen eine Mehrfachbindung.\\
 In folgenden Beispielen werden von einem Halogenalkan mit Hilfe eines Hydroxid-Ions ein Halogen- und ein H-Atom abgespalten.\\
 
-\subsubsection{$E1$}
+\subsection{$E1$}
 Die $E1$ Reaktion verläuft, wie auch die $S_N1$ Reaktion, monomolekular in zwei Schritten.\\
 \begin{enumerate}
     \item Schritt\\
@@ -504,7 +512,7 @@ Die $E1$ Reaktion verläuft, wie auch die $S_N1$ Reaktion, monomolekular in zwei
 \end{enumerate}
 
 
-\subsubsection{$E2$}
+\subsection{$E2$}
 Die $E2$ Reaktion verläuft, wie die $SN_2$ Reaktion, bimolekular in einem Schritt.\\
 
 
@@ -526,7 +534,7 @@ Die $E2$ Reaktion wird bei einer starken Base favorisiert, während die $E1$ ehe
 
 
 
-\subsubsection{Saytzeff Regel}
+\subsection{Saytzeff Regel}
 Die Saytzeff Regel ermöglicht eine Vorhersage über das bei einer chemischen Eliminierungsreaktion entstehende Produkt.
 Sie besagt, dass bei einer E-Reaktion mehr Produkt von von dem Kohlenwasserstoff mit der thermodynamisch günstigeren Doppelbindung entsteht.
 Das heißt, dass häufiger vom wasserstoffärmeren Atom ein Proton abgespalten wird.\\[5mm]
@@ -535,7 +543,7 @@ ist somit häufiger Produkt einer Eliminierung von Butan als\\[5mm]
 \chemfig{C(-[3]H)(-[5]H)=C(-[90]H)-C(-[90]H)(-[-90])-C(-[0]H)(-[90]H)(-[-90])-H}\\[5mm]
 
 
-\subsubsection{Dehydratisierung}
+\subsection{Dehydratisierung}
 Die Dehydratisierung ist eine Unterart der Eleminierungsreaktion $E1$. Die Dehydratisierung ist die Abspaltung von Wasser in Folge einer
 Reaktion. Sie ist eine typische Reaktion von Alkoholen. Die Dehydratisierung verläuft in drei Schritten ab.\\
 Im folgenden Beispiel wird Alkohol mithilfe des katalyastors $H_3O$(Ein Oxoniumion) zu Propen und und Wasser.\\\\
@@ -574,7 +582,7 @@ Im folgenden Beispiel wird Alkohol mithilfe des katalyastors $H_3O$(Ein Oxoniumi
 
 
 
-\subsection{Oxidation von Alkoholen}
+\section{Oxidation von Alkoholen}
 
 \subsubsection{Oxidation primärer Alkohole}
 \begin{center}
@@ -606,7 +614,8 @@ Das C-Atom gibt zwei Elektronen ab und wird oxidiert.\\
     $\Rightarrow$ \textbf{Sekundärer Alkohole $\xrightarrow{Redoxreaktion}$ Ketone}
 \end{center}
 
-\subsubsection{Oxidation tertiärer Alkohole}
+
+\subsection{Oxidation tertiärer Alkohole}
 \begin{center}
 \schemestart
 \chemfig{\phantom{H}-C(-[90])(-[-90])-C^{\color{red}0\color{black}}(-[90]CH_3)(-[-90]\charge{0=\|,-180=\|}{O}(-[-90]))-C(-[90])(-[-90])-} \quad+\quad \chemfig{Cu^{\color{red}\rom{2}\color{black}}=\charge{45=\|,-45=\|}{O}} \qquad \Large $\nrightarrow$ \normalsize
@@ -618,6 +627,11 @@ Tertiäre Alkohol können nicht oxidiert werden.
 \begin{center}
     $\Rightarrow$ \textbf{Tertiäre Alkohole $\nRightarrow$}
 \end{center}
+
+
+
+
+
 
 
 \end{document}
