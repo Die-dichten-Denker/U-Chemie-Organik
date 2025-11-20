@@ -202,7 +202,7 @@ Der Grund für diese Anordnung ist der +I-Effekt der Alkylgruppen.
 
 
 
-\subsection{Isomerie}
+\section{Isomerie}
 Der Name Isomer ist von Iso (griech. für gleich) und meros (griech. für Teil) abgeleitet. 
 Isomere sind chemische Verbindungen der gleichen Summenformel, aber unterschiedlicher chemischer Struktur und teilweise auch mit unterschiedlichen chemischen, physikalischen und biologischen Eigenschaften.
 
@@ -215,9 +215,40 @@ Konstitutionsisomere besitzen die gleiche Summenformel, aber eine andere Struktu
     \item Bindungsisomere (auch Valenzisomere) unterscheiden sich in der Anzahl und/oder Position von $\sigma$- und $\pi$-Bindungen.  
 \end{itemize}
 
-\subsubsection{Stereoisomerie}
+\subsection{Stereoisomerie}
 Stereoisomere haben grundsätzlich die gleiche Struktur (Konstitution) -- und damit auch die gleiche Summenformel -- unterscheiden sich aber durch die räumliche Anordnung (Konfiguration) der Atome. 
 Alle Stereoisomere, die keine Enantiomere sind, bezeichnet man als Diastereomere. Ein Spezialfall ist die cis-trans-Isomerie an Doppelbindungen. 
+
+
+
+\section{Mesomerie}
+Schaut man sich $CO_3^{2-}$ Molekül an, wird schnell klar, dass es drei Möglichkeiten für das Einzeichnen der
+Elektronen gäbe.\\
+\begin{center}
+\chemfig{C(=[90]\charge{45=\|,135=\|}{\ce{O}})(-[:-145]\charge{-145=\|,-235=\|,-55=\|}{O}^{\;\ominus})(-[:-35]\charge{-35=\|,55=\|,-125=\|}{O}^{\;\ominus})}\qquad\qquad
+\chemfig{C(-[90]\charge{90=\|,-180=\|,0=\|}{\ce{O}}^{\;\ominus})(=[:-145]\charge{-100=\|,-190=\|}{O})(-[:-35]\charge{-35=\|,55=\|,-125=\|}{O}^{\;\ominus})}\qquad\qquad
+\chemfig{C(-[90]\charge{90=\|,-180=\|,0=\|}{\ce{O}}^{\;\ominus})(-[:-145]\charge{-145=\|,-235=\|,-55=\|}{O}^{\;\ominus})(=[:-35]\charge{20=\|,-80=\|}{O}^{\;\ominus})}\\
+\end{center}
+
+Empirische Experimente zeigen allerdings, dass alle drei O-Atome dieselbe Ladung von $-\frac{2}{3}$ aufweisen.
+Diese Beobaachtung lässt sich nur durch eine \textbf{Delokalisierung} von den $\pi$-Elektronen der Doppelbindung erklären.
+Eine solche Delokalisierung wird in \textbf{mesomeren Grenzformeln} aufgeschrieben, um zu kennzeichnen, dass sich die wahre 
+Elektronenverteilung zwischen jenen liegt:
+
+\begin{center}
+\schemestart
+\chemfig{C(=[90]\charge{45=\|,135=\|}{\ce{O}})(-[:-145]\charge{-145=\|,-235=\|,-55=\|}{O}^{\;\ominus})(-[:-35]\charge{-35=\|,55=\|,-125=\|}{O}^{\;\ominus})}
+\qquad  \qquad
+\chemfig{C(-[90]\charge{90=\|,-180=\|,0=\|}{\ce{O}}^{\;\ominus})(=[:-145]\charge{-100=\|,-190=\|}{O})(-[:-35]\charge{-35=\|,55=\|,-125=\|}{O}^{\;\ominus})}
+\qquad  \qquad
+\chemfig{C(-[90]\charge{90=\|,-180=\|,0=\|}{\ce{O}}^{\;\ominus})(-[:-145]\charge{-145=\|,-235=\|,-55=\|}{O}^{\;\ominus})(=[:-35]\charge{20=\|,-80=\|}{O}^{\;\ominus})}
+\schemestop
+\end{center}
+
+
+
+
+
 
 
 
