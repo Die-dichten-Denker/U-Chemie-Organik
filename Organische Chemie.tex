@@ -14,6 +14,10 @@
 \usepackage{amssymb}
 \usepackage{tabularx}
 
+
+\usetikzlibrary{matrix}
+
+
 \hfuzz=999pt
 \hbadness=10000
 
@@ -235,15 +239,30 @@ Diese Beobaachtung lässt sich nur durch eine \textbf{Delokalisierung} von den $
 Eine solche Delokalisierung wird in \textbf{mesomeren Grenzformeln} aufgeschrieben, um zu kennzeichnen, dass sich die wahre 
 Elektronenverteilung zwischen jenen liegt:
 
+
 \begin{center}
 \schemestart
+\arrow(--[left delimiter={[}, right delimiter={]}])
+[
+\subscheme{
 \chemfig{C(=[90]\charge{45=\|,135=\|}{\ce{O}})(-[:-145]\charge{-145=\|,-235=\|,-55=\|}{O}^{\;\ominus})(-[:-35]\charge{-35=\|,55=\|,-125=\|}{O}^{\;\ominus})}
 \qquad  \qquad
 \chemfig{C(-[90]\charge{90=\|,-180=\|,0=\|}{\ce{O}}^{\;\ominus})(=[:-145]\charge{-100=\|,-190=\|}{O})(-[:-35]\charge{-35=\|,55=\|,-125=\|}{O}^{\;\ominus})}
 \qquad  \qquad
 \chemfig{C(-[90]\charge{90=\|,-180=\|,0=\|}{\ce{O}}^{\;\ominus})(-[:-145]\charge{-145=\|,-235=\|,-55=\|}{O}^{\;\ominus})(=[:-35]\charge{20=\|,-80=\|}{O}^{\;\ominus})}
+}]
 \schemestop
 \end{center}
+
+
+[
+\schemestart
+A \arrow(--[left delimiter={[}, right delimiter={]}])
+\subscheme{B \arrow[-90,2] C}
+\arrow
+D
+\schemestop
+]
 
 
 
