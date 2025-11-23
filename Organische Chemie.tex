@@ -7,6 +7,7 @@
 \usepackage{amsfonts}
 \usepackage{graphicx}
 \usepackage{chemfig}
+\usepackage{chemmacros}
 \usepackage{mhchem}
 \usepackage{fancyhdr}
 \usepackage{longtable}
@@ -224,7 +225,8 @@ Alle Stereoisomere, die keine Enantiomere sind, bezeichnet man als Diastereomere
 
 %-------------------------------------------------------------------------------------------------------
 
-\chapter{Von den Alkanen zur Carbonsäure}
+\chapter{Aliphatische Kohlenwasserstoffe}
+ Aliphatische Kohlenwasserstoffe (griech. aleiphar, fettig) sind organische verzweigte oder unverzweigte, ketten- oder ringförmige Kohlenwasserstoffketten. Die einfachste Gruppe aliphatischer Kohlenwasserstoffe sind die Alkane. 
 \section{Stoffklassen}
 \subsection{Alkane}
 
@@ -647,9 +649,49 @@ Tertiäre Alkohol können nicht oxidiert werden.
     $\Rightarrow$ \textbf{Tertiäre Alkohole $\nRightarrow$}
 \end{center}
 
-\chapter{Aromaten}
+\chapter{Aromatische Kohlenwasserstoffe}
+\section{Defintion}
+Aromaten (aromatische Verbindungen) oder auch Arene sind eine wichtige Verbindungsklasse in der organischen Chemie. Sie zeichnen sich durch eine besondere Bindungsstruktur aus. Der Begriff Aromat deutet nicht grundsätzlich auf ein besonderes Aroma dieser Substanzen hin. Er ist historisch begründet.
 
+Aromaten sind planare, cyclische Moleküle mit konjugierten Doppelbindungen. Sie haben, wenn sie die Aromatizitätskriterien erfüllen, besonders günstige Energieniveaus. Sie unterscheiden sich in chemischen und physikalischen Eigenschaften von den übrigen organischen Verbindungen, den Aliphaten, welche wir uns zuvor angeschaut haben. 
 
+\section{Aromatizitätskriterien}
+Notwendige, aber nicht hinreichende Voraussetzungen für einen Aromaten:
+\begin{itemize}
+    \item Ein cyclisches Molekül, das heißt, es hat mindestens einen Ring, der in vielen Fällen ein Benzolring ist. 
+    \item Ein vollständig über den Ring konjugiertes Doppelbindungs-System. 
+\end{itemize}
+Ein Aromat liegt dann vor, wenn auch die folgenden Bedingungen erfüllt sind: 
+\begin{itemize}
+    \item Das Doppelbindungssystem ist planar; in Ausnahmefällen sind leichte Abweichungen von der Ebene gestattet. Zum Beispiel ist in einigen Cyclophanen die Benzoleinheit in einem Winkel von bis zu 30° bootförmig deformiert
+    \item Die Zahl der delokalisierten Elektronen muss der Hückel-Regel genügen. 
+\end{itemize}
+
+\subsection{Hückel-Regel}
+Die von Erich Hückel aufgestellte Hückel-Regel wird meist durch die Formel ($4n + 2$) $\pi$-Elektronen ($n = 0,1,2,3\dots$), delokalisiert über alle Ringatome des Systems, wiedergegeben. Cyclisch konjugierte $\pi$-Systeme mit $4n$ $\pi$-Elektronen ($n = 1,2,3\dots$) heißen Antiaromaten. 
+
+\section{Benzol}
+Benzol (\chemfig{C_6H_6}) ist einer der wichtigsten aromatischen Verbindungen. Es ist die Basis vieler anderen Molekülen.
+\begin{center}
+    \schemestart
+    \chemname{\chemfig{**6(------)}}{Benzol}
+    \schemestop
+\end{center}
+
+Der Kreis innerhalb des Ringes symbolisiert die delokalisierten Elektronen. Da wir aber bei Reaktionsmechanismen
+Elektronenbewegungen zeigen wollen, benutzen wir die mesomeren Grenzformeln des Benzols. Diese stellen keine Zustände,
+zwischen welchen das Benzol wechselt dar, sondern die Zustände zwischen welchen das Molekül schwebt. Wichtig ist das die
+$\pi$-Elektronen delokalisiert sind, d.h. das sie sich frei zwischen den Kohlenstoffatomen bewegen.
+
+\begin{center}
+\[
+\Biggl[
+\chemfig{*6(=-=-=-)}
+\;\leftrightarrow\;
+\chemfig{*6(-=-=-=)}
+\Biggr]
+\]
+\end{center}
 
 
 \end{document}
